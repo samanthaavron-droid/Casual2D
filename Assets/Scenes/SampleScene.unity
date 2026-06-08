@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -256,6 +257,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a1972c0e15c044383996d2b768cc16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BlockController
+  spawner: {fileID: 804535604}
+  minX: -5
+  maxX: 5
+  blockFreezeThreshold: 2
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 804535603}
+  - component: {fileID: 804535604}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -365,12 +383,40 @@ Transform:
   m_GameObject: {fileID: 804535602}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8, z: 0}
+  m_LocalPosition: {x: 0, y: 4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1794845148}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &804535604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804535602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 706d0c56f894d17478881403afb948d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BlockSpawner
+  geometry:
+  - {fileID: 4383987450496977673, guid: 5115930439fcab2419960afbc438e64e, type: 3}
+  - {fileID: 311463224842899923, guid: c9b2bb7b9b2e8494ca10bcc15654c76c, type: 3}
+  - {fileID: 6104843582133022525, guid: 8cd56abf8f3711f41882033bb59706c5, type: 3}
+  - {fileID: 8502844238289003808, guid: e11715a0c3486b841a2bb82cfcf5c215, type: 3}
+  - {fileID: 8230982644957038645, guid: 7a9c94d581dd5c8499b0b66969f59409, type: 3}
+  - {fileID: 5753111665553063735, guid: 81ce1d59f86da7c43a75974d226c35da, type: 3}
+  - {fileID: 7750359130371830218, guid: 1506fd0eb1040524aa44c9473a909a46, type: 3}
+  - {fileID: 4325822401820825017, guid: 62c98ed8d89f3c742988092ce3b531fe, type: 3}
+  - {fileID: 30103892316254219, guid: 6f1e2fbebafb47a45b2d1b13d04b954c, type: 3}
+  - {fileID: 1964761878203168625, guid: 3fe1793aa38b96d4086f90ae19c47049, type: 3}
+  - {fileID: 1411650449092770352, guid: e0e18eda18451e64b86564a78fd1a92f, type: 3}
+  - {fileID: 537298874948064174, guid: 7ad73af7fdf3ca14092418a63787dd31, type: 3}
+  - {fileID: 7842527351454043012, guid: 87e4e6776845aa646b429fbc0bd17496, type: 3}
+  - {fileID: 5990228746528373223, guid: 10300ac4093dc21448489d12f1e9cc69, type: 3}
+  spawnRate: 3
 --- !u!1 &895929209
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +842,6 @@ GameObject:
   - component: {fileID: 1794845148}
   - component: {fileID: 1794845150}
   - component: {fileID: 1794845149}
-  - component: {fileID: 1794845151}
   m_Layer: 0
   m_Name: Starting platform
   m_TagString: Untagged
@@ -822,7 +867,6 @@ Transform:
   - {fileID: 1570946560}
   - {fileID: 1431216701}
   - {fileID: 1857467890}
-  - {fileID: 804535603}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!66 &1794845149
@@ -951,35 +995,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &1794845151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794845147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 706d0c56f894d17478881403afb948d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BlockSpawner
-  geometry:
-  - {fileID: 4383987450496977673, guid: 5115930439fcab2419960afbc438e64e, type: 3}
-  - {fileID: 311463224842899923, guid: c9b2bb7b9b2e8494ca10bcc15654c76c, type: 3}
-  - {fileID: 6104843582133022525, guid: 8cd56abf8f3711f41882033bb59706c5, type: 3}
-  - {fileID: 8502844238289003808, guid: e11715a0c3486b841a2bb82cfcf5c215, type: 3}
-  - {fileID: 8230982644957038645, guid: 7a9c94d581dd5c8499b0b66969f59409, type: 3}
-  - {fileID: 5753111665553063735, guid: 81ce1d59f86da7c43a75974d226c35da, type: 3}
-  - {fileID: 7750359130371830218, guid: 1506fd0eb1040524aa44c9473a909a46, type: 3}
-  - {fileID: 4325822401820825017, guid: 62c98ed8d89f3c742988092ce3b531fe, type: 3}
-  - {fileID: 30103892316254219, guid: 6f1e2fbebafb47a45b2d1b13d04b954c, type: 3}
-  - {fileID: 1964761878203168625, guid: 3fe1793aa38b96d4086f90ae19c47049, type: 3}
-  - {fileID: 1411650449092770352, guid: e0e18eda18451e64b86564a78fd1a92f, type: 3}
-  - {fileID: 537298874948064174, guid: 7ad73af7fdf3ca14092418a63787dd31, type: 3}
-  - {fileID: 7842527351454043012, guid: 87e4e6776845aa646b429fbc0bd17496, type: 3}
-  - {fileID: 5990228746528373223, guid: 10300ac4093dc21448489d12f1e9cc69, type: 3}
-  spawnPoint: {fileID: 804535603}
-  spawnRate: 3
 --- !u!1 &1856303713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,3 +1278,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1794845148}
+  - {fileID: 804535603}

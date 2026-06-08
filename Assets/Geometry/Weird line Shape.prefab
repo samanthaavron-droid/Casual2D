@@ -701,6 +701,7 @@ GameObject:
   - component: {fileID: 4628450368428172264}
   - component: {fileID: 8578127426315797869}
   - component: {fileID: 909282046688745078}
+  - component: {fileID: -2422089496768037083}
   m_Layer: 0
   m_Name: Weird line Shape
   m_TagString: Untagged
@@ -858,3 +859,15 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 7842527351454043012}
+--- !u!114 &-2422089496768037083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7842527351454043012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b6517e7ae2cfc4cb63d5f32fa8fb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Block

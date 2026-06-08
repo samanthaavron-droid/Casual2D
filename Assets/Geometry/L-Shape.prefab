@@ -563,6 +563,7 @@ GameObject:
   - component: {fileID: 564446295838235905}
   - component: {fileID: 7742920430838205824}
   - component: {fileID: 2586828753965622143}
+  - component: {fileID: -4924860563414755145}
   m_Layer: 0
   m_Name: L-Shape
   m_TagString: Untagged
@@ -718,6 +719,18 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 8230982644957038645}
+--- !u!114 &-4924860563414755145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8230982644957038645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b6517e7ae2cfc4cb63d5f32fa8fb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Block
 --- !u!1 &9131962311534444756
 GameObject:
   m_ObjectHideFlags: 0

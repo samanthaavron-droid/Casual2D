@@ -1,30 +1,18 @@
+using System.Collections;
 using UnityEngine;
 
 public class BlockSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] geometry;
-    [SerializeField] private Transform spawnPoint;
-    [SerializeField] private float spawnRate; //in seconds
-
-    private float dt;
-    private Vector2 mousePos;
     void Start()
     {
-        InvokeRepeating("SpawnBlock", 1, spawnRate);
+        StartCoroutine(SpawnBlock());
     }
-    void Update()
+    public IEnumerator SpawnBlock()
     {
-        dt = Time.deltaTime;
-        mousePos = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-        mousePos.y = 0;
-    }
-    private void MousePosUpdate()
-    {
-
-    }
-    private void SpawnBlock()
-    {
+        yield return new WaitForSecondsRealtime(1f);
         int randomIndex = Random.Range(0, geometry.Length);
-        Instantiate(geometry[randomIndex], spawnPoint.position, Quaternion.identity);
+        GameObject newObj = Instantiate(geometry[randomIndex], gameObject.transform.position, Quaternion.identity);
+        BlockController.instance.AssignBlock(newObj);
     }
 }

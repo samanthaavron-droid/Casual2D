@@ -425,6 +425,7 @@ GameObject:
   - component: {fileID: 4873207416671227615}
   - component: {fileID: 518410854416126062}
   - component: {fileID: 1570003131821353390}
+  - component: {fileID: 6726761663521664150}
   m_Layer: 0
   m_Name: Ladder shape
   m_TagString: Untagged
@@ -584,6 +585,18 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 5753111665553063735}
+--- !u!114 &6726761663521664150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5753111665553063735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b6517e7ae2cfc4cb63d5f32fa8fb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Block
 --- !u!1 &7592448699145285323
 GameObject:
   m_ObjectHideFlags: 0

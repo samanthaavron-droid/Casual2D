@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8386501233000899252}
   - component: {fileID: 7659022176354459205}
   - component: {fileID: 9079218059374568343}
+  - component: {fileID: -861802514187381472}
   m_Layer: 0
   m_Name: Broken Line shape
   m_TagString: Untagged
@@ -168,6 +169,18 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 311463224842899923}
+--- !u!114 &-861802514187381472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311463224842899923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b6517e7ae2cfc4cb63d5f32fa8fb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Block
 --- !u!1 &393873161778744761
 GameObject:
   m_ObjectHideFlags: 0

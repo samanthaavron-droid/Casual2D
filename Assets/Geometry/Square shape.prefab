@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7798439354462449223}
   - component: {fileID: 9090340946515464620}
   - component: {fileID: 9068311638020538366}
+  - component: {fileID: 1493155824457633441}
   m_Layer: 0
   m_Name: Square shape
   m_TagString: Untagged
@@ -153,6 +154,18 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 1964761878203168625}
+--- !u!114 &1493155824457633441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964761878203168625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b6517e7ae2cfc4cb63d5f32fa8fb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Block
 --- !u!1 &3060371648205967078
 GameObject:
   m_ObjectHideFlags: 0
